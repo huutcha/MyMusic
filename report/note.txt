@@ -1,0 +1,22 @@
+- Mã màu chính,phụ,màu nền
+
+- Font-size, font-family, font-weight
+
+Tạo Giao diện
+Đăng nhập: Giao diện đăng nhập người dùng có nút đăng nhập, đăng ký. Người dùng bắt buộc đăng nhập
+
+Đăng ký: 
+
+Giao diện kho chứa: 
+	+ Trường hợp kho trống:
+	+ Trường hợp kho có bài hát:
+
+Giao diện Playlist:
+	+ Trường hợp Playlist trống:
+	+ Trường hợp Playlist có bài hát:
+
+Giao diện trình phát nhạc:
+
+
+Giao diện thành phần:
+	+ Hộp thoại xác nhận xóa
