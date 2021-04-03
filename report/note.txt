@@ -1,3 +1,6 @@
+Link Figma:
+https://www.figma.com/file/jRBmxvkuyBCO1IZNSJff6Q/MyMusic?node-id=0%3A1
+
 - Mã màu chính,phụ,màu nền
 
 - Font-size, font-family, font-weight
