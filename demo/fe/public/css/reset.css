@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+p,h1,h2,h3,h4,h5{
+    margin: 0;
+}

@@ -1,0 +1,16 @@
+@import "./variable";
+
+@font-face {
+    src: url("../assets/fonts/BrushScriptStd.otf");
+    font-family: "logo";
+}
+*{
+    box-sizing: inherit;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+    
+}

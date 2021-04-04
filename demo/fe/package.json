@@ -1,0 +1,26 @@
+{
+  "name": "fe",
+  "version": "1.0.0",
+  "description": "\"Ho tro sass fe\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss/login.scss public/css/login.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huutcha/MyMusic.git"
+  },
+  "keywords": [
+    "mymusic"
+  ],
+  "author": "huudinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huutcha/MyMusic/issues"
+  },
+  "homepage": "https://github.com/huutcha/MyMusic#readme",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}
