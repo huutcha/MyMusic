@@ -1,0 +1,32 @@
+@mixin bg() {
+    .bg1{
+        position: absolute;
+        width: 65vh;
+        height: 65vh;
+        right: -5vw;
+        bottom: -10vh;
+        background: #578463;
+        opacity: 0.4;
+        border-radius: 50%;
+    }
+    .bg2{
+        position: absolute;
+        width: 22vw;
+        height: 22vw;
+        left: 35vw;
+        bottom: -5vh;
+        background: rgba(196, 196, 196, 0.6);
+        opacity: 0.5;
+        border-radius: 50%;
+    }
+    .bg3{
+        background: rgba(114, 99, 99, 0.2);
+        opacity: 0.8;
+        position: absolute;
+        width: 18vw;
+        height: 18vw;
+        left: 45vw;
+        top: -3vh;
+        border-radius: 50%;
+    }
+}
