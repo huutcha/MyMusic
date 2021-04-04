@@ -1,0 +1,96 @@
+@import "variable";
+@import "mixin";
+@font-face {
+    src: url("../assets/fonts/BrushScriptStd.otf");
+    font-family: "logo";
+}
+
+*{
+    box-sizing: inherit;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+    background-color: $backgroundcolor;
+    overflow: hidden;
+    @include bg();
+    header{
+        $headerheight: 128px;
+        position: absolute;
+        height: $headerheight;
+        width: 500px;
+        top: -($headerheight / 2);
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border-radius: ($headerheight / 2);
+        nav{
+            display: flex;
+            position: absolute;
+            bottom: 25%;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            left: 50%;
+            transform: translate(-50%,50%);
+            .logo-text{
+                font-family: 'logo';
+                font-size: 36px;
+                color: $logocolor;
+            }
+            .user{
+                height: 50px;
+                width: 50px;
+                background-color: black;
+                border-radius: 50%;
+                text-align: center;
+                i{
+                    color: white;
+                    font-size: 26px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+    .sidebar{
+        position: fixed;
+        width: 100px;
+        height: 400px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            li{
+                padding: 0 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .active{
+                    height: 14px;
+                    width: 14px;
+                    border-radius: 50%;
+                    background-color: $primarycolor;
+                }
+                svg.svg-active{
+                    box-shadow: 0 0 10px 6px #5af8875d;
+                    border-radius: 30%;
+                    background-color:  #5af8875d;
+                    background-blend-mode: color-burn;
+                }
+            }
+        }
+    }
+}

@@ -58,8 +58,8 @@ body{
             margin-bottom: 20px;
             input{
                 width: 100%;
-                padding: 10px 12px;
-                text-align: center;
+                padding: 6px 12px 10px 0;
+                text-align: left;
                 outline: none;
                 border: none;
                 color: white;
@@ -95,6 +95,13 @@ body{
             outline: none;
             margin: 20px 0;
             cursor: pointer;
+            transition: 0.2s; 
+            &:hover{
+                opacity: 0.8;
+            }
+            &:active{
+                transform: translateY(4px);
+            }
         }
         .separate{
             span{
@@ -144,8 +151,15 @@ body{
                 text-align: center;
                 line-height: 36px;
                 color: white;
+                transition: all 0.2s;
                 i{
                     background-color: transparent;
+                }
+                &:hover{
+                    opacity: 0.8;
+                }
+                &:active{
+                    transform: translateY(4px);
                 }
             }
         }

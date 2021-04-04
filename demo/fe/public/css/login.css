@@ -90,8 +90,8 @@ body form .form-group {
 }
 body form .form-group input {
   width: 100%;
-  padding: 10px 12px;
-  text-align: center;
+  padding: 6px 12px 10px 0;
+  text-align: left;
   outline: none;
   border: none;
   color: white;
@@ -126,6 +126,13 @@ body form .btn {
   outline: none;
   margin: 20px 0;
   cursor: pointer;
+  transition: 0.2s;
+}
+body form .btn:hover {
+  opacity: 0.8;
+}
+body form .btn:active {
+  transform: translateY(4px);
 }
 body form .separate span {
   display: flex;
@@ -174,9 +181,16 @@ body form .socials .icon {
   text-align: center;
   line-height: 36px;
   color: white;
+  transition: all 0.2s;
 }
 body form .socials .icon i {
   background-color: transparent;
+}
+body form .socials .icon:hover {
+  opacity: 0.8;
+}
+body form .socials .icon:active {
+  transform: translateY(4px);
 }
 body form .redirect {
   margin-top: 30px;
