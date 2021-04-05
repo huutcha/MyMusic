@@ -30,3 +30,10 @@
         border-radius: 50%;
     }
 }
+@mixin btn() {
+    padding: 8px 14px;
+    font-size: 14px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
