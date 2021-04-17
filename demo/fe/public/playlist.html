@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyMusic | Kho lưu trữ</title>
+    <title>MyMusic | PlayList của tôi</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./vendor/fas/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -108,7 +108,7 @@
     </div>
     <section>
         <h1>PlayList của tôi</h1>
-        <button class="upload" id="create-playlist-btn">Tạo PlayList mới</button>
+        <a href="./addplaylist.html" class="btn">Tạo PlayList mới</a>
         <ul class="list-playlist">
             <li class="playlist-item">
                 <div class="playlist-container">
@@ -120,9 +120,7 @@
                         <span>Những bản nhạc nhẹ nhàng, dễ chịu</span>
                     </div>
                     <div class="list-control">
-                        <div class="item-container add-to-playlist">
-                            <i class="fas fa-plus"></i>
-                        </div>
+                        <a href="./fixplaylist.html"><i class="fas fa-edit"></i></a>
                         <i class="fas fa-play play"></i>
                         <i class="fas fa-pause pause"></i>
                         <i class="far fa-trash-alt delete-music"></i>
@@ -312,7 +310,7 @@
             <path d="M28.4891 27.9826C29.88 25.6944 30.8027 22.8003 30.9817 19.9366C31.0953 18.0986 30.6787 16.1692 29.7767 14.3549C28.3617 11.5048 25.9311 9.90375 23.5831 8.35685C21.8307 7.20259 20.1748 6.11265 19.0042 4.55559L18.7942 4.27803C18.1022 3.3641 17.3207 2.32832 17.1967 1.45839C17.0728 0.578314 16.2603 -0.047895 15.3721 0.00287874C14.4701 0.0638072 13.7712 0.798334 13.7712 1.68857V31.8482C12.3286 30.9884 10.5522 30.4603 8.60698 30.4603C3.86281 30.4603 0 33.4966 0 37.2302C0 40.9637 3.86281 44 8.60698 44C13.3511 44 17.214 40.9637 17.214 37.2302V17.5029C19.7995 18.4744 24.0307 20.9487 25.1944 26.7268C24.9775 27.0416 24.7709 27.3801 24.5299 27.6509C23.8999 28.3515 23.9687 29.4212 24.6848 30.0372C25.394 30.6601 26.482 30.5856 27.112 29.8849C27.5733 29.3704 27.983 28.7679 28.3755 28.1383C28.4168 28.0909 28.4548 28.0401 28.4891 27.9826Z" fill="#5AF886"/>
         </svg>
         <div class="info">
-            <h2>Lời xin lỗi vụng về</h2>
+            <h2>Lời xin lỗi vụng về huuuuuuuuu</h2>
             <span>Quân A.P</span>
         </div>
         <div class="player-control">
@@ -341,31 +339,24 @@
     <script src="./js/dialog.js"></script>
     <script src="./js/progress-slider.js"></script>
     <script>
-        $('#create-playlist-btn').click(function(){
-            let html = dialog('uploadDialog');
-            $('.overlay').html(html);
-            $('.overlay').fadeIn(300);
-        })
         $(document).on('click','.cancel', function(){
             $('.overlay').fadeOut(300);
         })
-        $('.delete-music').click(function(){
-            let html = dialog('deleteDialog');
+        $('.delete-music').click(function(e){
+            e.stopPropagation();
+            let html = dialog('deletePlayListDialog');
             $('.overlay').html(html);
             $('.overlay').fadeIn(300);
         })
-        $('.add-to-playlist').click(function(){
-            let html = dialog('selectPlaylistDialog');
-            $('.overlay').html(html);
-            $('.overlay').fadeIn(300);
-        })
-        $('.play').click(function(){
+        $('.play').click(function(e){
+            e.stopPropagation();
             $('.pause').hide();
             $('.play').show();
             $(this).hide();
             $(this).siblings('.pause').fadeIn(100);
         })
-        $('.pause').click(function(){
+        $('.pause').click(function(e){
+            e.stopPropagation();
             $(this).hide();
             $(this).siblings('.play').fadeIn(100);
         })

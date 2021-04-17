@@ -125,6 +125,7 @@ body .sidebar ul li svg.svg-active {
 body section {
   width: 900px;
   min-height: 540px;
+  max-height: 540px;
   position: absolute;
   top: 15%;
   left: 50%;
@@ -134,6 +135,7 @@ body section {
   backdrop-filter: blur(4px);
   padding: 30px;
   border-radius: 20px;
+  overflow: auto;
 }
 body section h1 {
   color: white;
@@ -147,17 +149,18 @@ body section h1::before {
   background-color: #02FFA4;
   margin-right: 8px;
 }
-body section .upload {
+body section .btn {
   padding: 7px 20px;
   border: 1px solid #02FFA4;
   color: #02FFA4;
   background-color: transparent;
   border-radius: 50px;
   margin: 16px 0;
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
+  display: inline-block;
 }
-body section .upload:hover {
+body section .btn:hover {
   color: white;
   background-color: #02FFA4;
 }
@@ -210,17 +213,8 @@ body section .list-music li .list-control :hover {
 body section .list-music li .list-control .pause {
   display: none;
 }
-body section .list-music li .list-control .item-container {
-  border: 2px solid white;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body section .list-music li .list-control .item-container:hover {
-  border: 2px solid #02FFA4;
+body section .list-music li .list-control a {
+  color: white;
 }
 body section .list-playlist li {
   margin-bottom: 2px;
@@ -274,17 +268,8 @@ body section .list-playlist li .playlist-container .list-control :hover {
 body section .list-playlist li .playlist-container .list-control .pause {
   display: none;
 }
-body section .list-playlist li .playlist-container .list-control .item-container {
-  border: 2px solid white;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body section .list-playlist li .playlist-container .list-control .item-container:hover {
-  border: 2px solid #02FFA4;
+body section .list-playlist li .playlist-container .list-control a {
+  color: white;
 }
 body section .list-playlist li .music-playlist {
   width: 94%;
@@ -337,6 +322,47 @@ body section .list-playlist li .music-playlist li .list-control :hover {
 body section .list-playlist li .music-playlist li .list-control .pause {
   display: none;
 }
+body section .form {
+  margin-top: 20px;
+  color: white;
+}
+body section .form .form-group {
+  width: 60%;
+  margin-bottom: 14px;
+}
+body section .form .form-group input {
+  width: 100%;
+  display: block;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: 1px solid #5FBE7A;
+  border-radius: 6px;
+  margin-top: 4px;
+  color: white;
+}
+body section .form .form-group input::placeholder {
+  color: #5FBE7A;
+}
+body section .form .form-group textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #5FBE7A;
+  border-radius: 6px;
+  color: white;
+  margin-top: 4px;
+}
+body section .form .form-group select {
+  width: 30%;
+  background-color: transparent;
+  border: 1px solid #5FBE7A;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: white;
+  margin-top: 4px;
+}
+body section .form .form-group select option {
+  color: black;
+}
 body .player {
   position: fixed;
   left: 0;
@@ -356,6 +382,12 @@ body .player svg {
 body .player .info {
   margin-right: 30px;
   flex: 1;
+  max-width: 320px;
+}
+body .player .info h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 body .player .info span {
   color: #ccc;
