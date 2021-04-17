@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/* Nơi khai báo biến*/
+@font-face {
+  src: url("../assets/fonts/BrushScriptStd.otf");
+  font-family: "logo";
+}
+* {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  height: 100vh;
+  background-color: #322E2E;
+  overflow: hidden;
+}
+body .bg1 {
+  position: absolute;
+  width: 65vh;
+  height: 65vh;
+  right: -5vw;
+  bottom: -10vh;
+  background: #578463;
+  opacity: 0.4;
+  border-radius: 50%;
+}
+body .bg2 {
+  position: absolute;
+  width: 22vw;
+  height: 22vw;
+  left: 35vw;
+  bottom: -5vh;
+  background: rgba(196, 196, 196, 0.6);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+body .bg3 {
+  background: rgba(114, 99, 99, 0.2);
+  opacity: 0.8;
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  left: 45vw;
+  top: -3vh;
+  border-radius: 50%;
+}
+body img {
+  position: absolute;
+  width: 26vw;
+  height: 90vh;
+  left: 5vw;
+  bottom: 0;
+}
+body .logo {
+  position: absolute;
+  top: 15vh;
+  left: 30vw;
+  text-align: center;
+}
+body .logo h1 {
+  font-size: 50px;
+  font-family: "logo";
+  color: #02FFA4;
+}
+body .logo p {
+  font-size: 18px;
+  color: #B4B4B4;
+}
+body form {
+  height: 560px;
+  width: 420px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16vw;
+  background-color: #5FBE7A;
+  box-shadow: 4px 8px 14px rgba(156, 255, 201, 0.23);
+  border-radius: 30px;
+  padding: 50px 40px;
+}
+body form .title {
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+body form .form-group {
+  margin-bottom: 20px;
+}
+body form .form-group input {
+  width: 100%;
+  padding: 6px 12px 10px 0;
+  text-align: left;
+  outline: none;
+  border: none;
+  color: white;
+  border-bottom: 1px solid #494040;
+  background-color: transparent;
+  font-size: 18px;
+}
+body form .form-group input::placeholder {
+  color: #464d48;
+}
+body form .reset {
+  text-align: right;
+}
+body form .reset button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #4343f7;
+  text-decoration: underline;
+  cursor: pointer;
+}
+body form .btn {
+  width: 100%;
+  padding: 10px 12px;
+  text-align: center;
+  border: none;
+  border-radius: 100px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  outline: none;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+body form .btn:hover {
+  opacity: 0.8;
+}
+body form .btn:active {
+  transform: translateY(4px);
+}
+body form .separate span {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  color: #5F5757;
+}
+body form .separate ::before {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 40%;
+  background-color: #5F5757;
+}
+body form .separate ::after {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 40%;
+  background-color: #5F5757;
+}
+body form .socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 12px auto;
+}
+body form .socials :nth-child(1) {
+  background-color: #3B5998;
+}
+body form .socials :nth-child(2) {
+  background-color: #f31634;
+}
+body form .socials :nth-child(2) i {
+  color: green;
+}
+body form .socials :nth-child(3) {
+  background-color: #55ACEE;
+}
+body form .socials .icon {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: white;
+  transition: all 0.2s;
+}
+body form .socials .icon i {
+  background-color: transparent;
+}
+body form .socials .icon:hover {
+  opacity: 0.8;
+}
+body form .socials .icon:active {
+  transform: translateY(4px);
+}
+body form .redirect {
+  margin-top: 30px;
+  text-align: center;
+}
+body form .redirect a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 12px;
+}
+
+/*# sourceMappingURL=login.css.map */

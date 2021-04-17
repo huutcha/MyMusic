@@ -1,0 +1,176 @@
+@import "variable";
+@import "mixin";
+@font-face {
+    src: url("../assets/fonts/BrushScriptStd.otf");
+    font-family: "logo";
+}
+
+*{
+    box-sizing: inherit;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+    background-color: $backgroundcolor;
+    overflow: hidden;
+    @include bg();
+    img{
+        position: absolute;
+        width: 26vw;
+        height: 90vh;
+        left: 5vw;
+        bottom: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 15vh;
+        left: 30vw;
+        text-align: center;
+        h1{
+            font-size: 50px;
+            font-family: 'logo';
+            color: $logocolor;
+        }
+        p{
+            font-size: 18px;
+            color: #B4B4B4;
+        }
+    }
+    form{
+        height: 560px;
+        width: 420px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16vw;
+        background-color: $primarycolor;
+        box-shadow: 4px 8px 14px rgba(156, 255, 201, 0.23);
+        border-radius: 30px;
+        padding: 50px 40px;
+        .title{
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .form-group{
+            margin-bottom: 20px;
+            input{
+                width: 100%;
+                padding: 6px 12px 10px 0;
+                text-align: left;
+                outline: none;
+                border: none;
+                color: white;
+                border-bottom: 1px solid #494040;
+                background-color: transparent;
+                font-size: 18px;
+                &::placeholder{
+                    color: #464d48;
+                }
+            }
+        }
+        .reset{
+            text-align: right;
+            button{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: rgb(67, 67, 247);
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .btn{
+            width: 100%;
+            padding: 10px 12px;
+            text-align: center;
+            border: none;
+            border-radius: 100px;
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+            outline: none;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: 0.2s; 
+            &:hover{
+                opacity: 0.8;
+            }
+            &:active{
+                transform: translateY(4px);
+            }
+        }
+        .separate{
+            span{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                color: #5F5757;
+            }
+            ::before{
+                content: " ";
+                display: block;
+                height: 2px;
+                width: 40%;
+                background-color: #5F5757;
+            }
+            ::after{
+                content: " ";
+                display: block;
+                height: 2px;
+                width: 40%;
+                background-color: #5F5757;
+            }
+        }
+        .socials{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+            margin: 12px auto;
+            :nth-child(1){
+                background-color: #3B5998;
+            }
+            :nth-child(2){
+                background-color: #f31634;
+                i{
+                    color: green;
+                }
+            }
+            :nth-child(3){
+                background-color: #55ACEE;
+            }
+            .icon{
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 36px;
+                color: white;
+                transition: all 0.2s;
+                i{
+                    background-color: transparent;
+                }
+                &:hover{
+                    opacity: 0.8;
+                }
+                &:active{
+                    transform: translateY(4px);
+                }
+            }
+        }
+        .redirect{
+            margin-top: 30px;
+            text-align: center;
+            a{
+                color: white;
+                text-decoration: underline;
+                margin-left: 12px;
+            }
+        }
+    }
+}

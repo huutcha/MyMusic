@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Test</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./vendor/fas/css/all.css">
+    <style>
+        body{
+            margin: 0;
+            position: relative;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+body .overlay .dialog {
+  position: absolute;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 14px;
+}
+body .overlay .dialog .heading {
+  padding: 6px 16px;
+  background-color: #0A3516;
+  color: white;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+body .overlay .dialog .heading i {
+  font-size: 22px;
+  cursor: pointer;
+}
+body .overlay .dialog .heading i:hover {
+  opacity: 0.8;
+}
+body .overlay .dialog .content {
+  padding: 6px 16px;
+  height: 200px;
+  overflow: hidden;
+  background-color: white;
+  font-size: 14px;
+     color: #333;
+}
+body .overlay .dialog .footer {
+  background-color: white;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  border-top: 2px solid #ccc;
+  padding: 10px 16px;
+  text-align: right;
+}
+body .overlay .dialog .footer .btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+body .overlay .dialog .footer .btn.btn-info {
+  background-color: #208B8B;
+}
+body .overlay .dialog .footer .btn.btn-seco {
+  background-color: #A6AFA9;
+}
+body .overlay .dialog .footer .btn:hover {
+  opacity: 0.8;
+}
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="dialog" id="select-playlist-dialog">
+            <div class="heading">
+                <p>Thêm vào PlayList</p>
+                <i class="fas fa-times cancel"></i>
+            </div>
+            <div class="content">
+                <label for="select-playlist">Chọn PlayList:</label>
+                <select name="playlist" id="select-playlist">
+                    <option>-- Chọn PlayList --</option>
+                    <option>Nhạc nhẹ</option>
+                    <option>Nhạc Chill</option>
+                    <option>Nhạc Bolero</option>
+                </select>
+            </div>
+            <div class="footer">
+                <button class="btn btn-info">Xác nhận</button>
+                <button class="btn btn-seco cancel">Hủy bỏ</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
